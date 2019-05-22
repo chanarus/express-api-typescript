@@ -34,6 +34,8 @@ export class ApiServer implements HttpServer {
         res.send(500, err);
       }
     });
+
+    console.log(`Added routes ${method.toUpperCase()}: ${url}`);
   }
 
   public start(port: number): void {
