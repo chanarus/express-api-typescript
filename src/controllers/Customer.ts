@@ -16,7 +16,7 @@ export class CustomerController implements Controller {
   }
 
   private getCustomer(req: Request, res: Response): void {
-    res.status(200).send({ data: 'get one' });
+    res.status(200).send({ data: `get ${req.params.id}` });
   }
 
   private addCustomer(req: Request, res: Response): void {
@@ -24,10 +24,10 @@ export class CustomerController implements Controller {
   }
 
   private updateCustomer(req: Request, res: Response): void {
-    res.status(200).send({ data: 'update one' });
+    res.status(200).send({ data: `update ${req.params.id}` });
   }
 
   private deleteCustomer(req: Request, res: Response): void {
-    res.status(200).send({ data: 'delete one' });
+    res.status(200).send({ data: `delete ${req.params.id}` });
   }
 }
